@@ -41,11 +41,14 @@ pub struct Writer<W> {
 
 impl<W: Write> Writer<W> {
     pub fn new(output: W, prefix: String) -> Writer<W> {
-        Writer {
+        let mut writer = Writer {
             prefix: prefix,
             frames: vec![],
             output: Output { inner: output, needs_space: 0 }
-        }
+        };
+        writer.write_indent()
+            .expect("failed to initialise output");
+        writer
     }
 
     pub fn push_frame(&mut self, frame: Frame) {
@@ -74,7 +77,10 @@ impl<W: Write> Writer<W> {
     }
 
     pub fn write_indent(&mut self) -> Result {
-        self.output.inner.write_str(&self.prefix)?;
+        if !self.prefix.is_empty() {
+            self.output.inner.write_str(&self.prefix)?;
+            self.output.needs_space += 1;
+        }
         for frame in &self.frames[..] {
             match frame {
                 &Frame::ListItem(None) => {

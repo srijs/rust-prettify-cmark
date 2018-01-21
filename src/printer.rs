@@ -19,11 +19,11 @@ use writer::{Frame, Writer};
 /// use prettify_cmark::PrettyPrinter;
 ///
 /// fn main() {
-///     let events = Parser::new("Lorem _ipsum_ dolor `sit`.");
-///     let mut printer = PrettyPrinter::default();
+///     let events = Parser::new("Lorem _ipsum_!\n\nDolor `sit`.");
+///     let mut printer = PrettyPrinter::new_with_prefix(String::new(), "///");
 ///     printer.push_events(events).unwrap();
 ///
-///     assert_eq!(printer.into_inner(), "Lorem *ipsum* dolor `sit`.")
+///     assert_eq!(printer.into_inner(), "/// Lorem *ipsum*!\n///\n/// Dolor `sit`.")
 /// }
 /// ```
 pub struct PrettyPrinter<W = String> {
