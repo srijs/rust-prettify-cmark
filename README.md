@@ -1,2 +1,3 @@
-# rust-prettify-cmark
-Pretty-printing for CommonMark documents
+# `prettify-cmark`
+
+Pretty-printing for [CommonMark](http://commonmark.org/) documents.

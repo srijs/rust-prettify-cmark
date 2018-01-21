@@ -1,0 +1,7 @@
+[package]
+name = "prettify-cmark"
+version = "0.1.0"
+authors = ["Sam Rijs <srijs@airpost.net>"]
+
+[dependencies]
+pulldown-cmark = "0.1.0"
