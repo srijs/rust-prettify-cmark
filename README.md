@@ -5,6 +5,8 @@ Pretty-printing for [CommonMark](http://commonmark.org/) documents.
 [![Build Status](https://travis-ci.org/srijs/rust-prettify-cmark.svg?branch=master)](https://travis-ci.org/srijs/rust-prettify-cmark)
 [![crates](http://meritbadge.herokuapp.com/prettify-cmark)](https://crates.io/crates/prettify-cmark)
 
+[Documentation](https://docs.rs/prettify-cmark)
+
 ## Installation
 
 Add this to your `Cargo.toml`:
