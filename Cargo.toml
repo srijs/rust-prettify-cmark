@@ -2,6 +2,11 @@
 name = "prettify-cmark"
 version = "0.1.0"
 authors = ["Sam Rijs <srijs@airpost.net>"]
+description = "Pretty-printing for CommonMark documents"
+license = "MIT"
+repository = "https://github.com/srijs/rust-prettify-cmark"
+documentation = "https://docs.rs/prettify-cmark"
+keywords = ["pretty", "print", "format", "commonmark", "markdown"]
 
 [dependencies]
 pulldown-cmark = "0.1.0"
