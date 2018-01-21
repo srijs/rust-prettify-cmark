@@ -182,7 +182,7 @@ impl<W: Write> PrettyPrinter<W> {
                 }
             },
             Event::Html(_html) => {
-                unimplemented!()
+                // not supported for now
             },
             Event::InlineHtml(html) => {
                 self.writer.write_text(html.as_ref())?
