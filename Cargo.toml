@@ -1,6 +1,6 @@
 [package]
 name = "prettify-cmark"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Sam Rijs <srijs@airpost.net>"]
 description = "Pretty-printing for CommonMark documents"
 license = "MIT"
